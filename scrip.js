@@ -44,7 +44,7 @@ async function foo(lat,lon,name){
   
 
     // var res=await fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=754cb04888f4418cfd723d55f1709446`)
-    var res2=await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=754cb04888f4418cfd723d55f1709446`)
+    // var res2=await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=754cb04888f4418cfd723d55f1709446`)
     
     let final_res=await  res2.json()
     
