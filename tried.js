@@ -11,10 +11,9 @@ async function bar(data1){
     var data1=await res.json()
     for(var i=0;i<data1.length;i++){
       
-// console.log(data1)
         var col=document.createElement("div")
         col.className="col-md-4"
-        col.innerHTML=`<div class="card" id="${data1[i].name.common}" style="width: 18rem;">
+        col.innerHTML=`<div class="card" style="width: 18rem;">
      
         <div class="card-body bg-info">
           <h5 class="card-title bg-dark text-light p-2 text-center">
@@ -126,3 +125,21 @@ bar()
       })
     })
 console.log(buttons)
+
+
+
+
+let final_res = await res2.json();
+
+  console.log(final_res);
+  console.log(name);
+  
+  // Clear existing content
+  name.innerHTML = "";
+  // Fetch weather data
+
+  const temperatureElement = document.createElement("p");
+  temperatureElement.textContent = "Temperature: " + final_res.weather[0].description;
+
+  // Append elements to the weather container div
+  name.appendChild(temperatureElement);
